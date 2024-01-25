@@ -74,7 +74,7 @@ public class Person {
     }
 
     public void presentacion(String nombre, String apellido, int edad, double altura, boolean casado, String documento, String[] nombreMascotas) {
-        System.out.println("Hola! Mi nombre es " + nombre + ".");
+        System.out.println("Hola! Mi nombre es " + nombre + " " + apellido + ".");
         System.out.println("Tengo " + edad + " años y mido " + altura + " metros de altura.");
         if (casado) {
             System.out.println("Estoy casado/a.");
