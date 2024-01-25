@@ -1,20 +1,23 @@
-package dia_2;
+package dia_3;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class Person {
+
     private String nombre, apellido, documento;
-    private int edad;
+    private int age;
     private double altura;
     private boolean casado;
-    private String[] nombreMascotas;
+    private Set<Pet> nombreMascotas = new HashSet<>();
 
-    public Person(String nombre, String apellido, String documento, int edad, double altura, boolean casado, String[] nombreMascotas) {
+    public Person(String nombre, String apellido, String documento, int age, double altura, boolean casado) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.documento = documento;
-        this.edad = edad;
+        this.age = age;
         this.altura = altura;
         this.casado = casado;
-        this.nombreMascotas = nombreMascotas;
     }
 
     public String getNombre() {
@@ -41,12 +44,12 @@ public class Person {
         this.documento = documento;
     }
 
-    public int getEdad() {
-        return edad;
+    public int getAge() {
+        return age;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public double getAltura() {
@@ -65,15 +68,16 @@ public class Person {
         this.casado = casado;
     }
 
-    public String[] getNombreMascotas() {
+    public Set<Pet> getNombreMascotas() {
         return nombreMascotas;
     }
 
-    public void setNombreMascotas(String[] nombreMascotas) {
-        this.nombreMascotas = nombreMascotas;
+    public void addPets(Pet mascota) {
+        mascota.getPropietario(this);
+        this.nombreMascotas.add(mascota);
     }
 
-    public void presentacion(String nombre, String apellido, int edad, double altura, boolean casado, String documento, String[] nombreMascotas) {
+    public void presentacion(String nombre, String apellido, int edad, double altura, boolean casado, String documento, Set<Pet> nombreMascotas) {
         System.out.println("Hola! Mi nombre es " + nombre + " " + apellido + ".");
         System.out.println("Tengo " + edad + " años y mido " + altura + " metros de altura.");
         if (casado) {
@@ -82,13 +86,15 @@ public class Person {
             System.out.println("No estoy casado/a.");
         }
         System.out.println("Mi DNI es " + documento + ".");
-        if (nombreMascotas.length > 0 ) {
+        if (!nombreMascotas.isEmpty()) {
             System.out.println("Mis mascotas se llaman: ");
-            for (int i = 0; i<nombreMascotas.length; i++) {
-                System.out.println("- " + nombreMascotas[i]);
+            for (Pet mascota : nombreMascotas) {
+                System.out.println("- " + mascota.getNombre());
             }
         } else {
             System.out.println("No tengo mascotas.");
         }
     }
+
+
 }
