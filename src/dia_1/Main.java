@@ -104,7 +104,7 @@ public class Main {
                 numero = scanner.nextInt();
                 primeraVuelta = true;
             } else {
-                System.out.println("[Error]" + mensaje);
+                System.out.println("[Error] " + mensaje);
                 numero = scanner.nextInt();
             }
 
@@ -124,7 +124,7 @@ public class Main {
                 numero = scanner.nextInt();
                 primeraVuelta = true;
             } else {
-                System.out.println("[Incorrecto]" + mensaje);
+                System.out.println("[Incorrecto] " + mensaje);
                 numero = scanner.nextInt();
             }
 
@@ -301,13 +301,15 @@ public class Main {
     public static void boleteriaBowling() {
         System.out.println("-------------------------------------------------------");
         System.out.println("< MENU BOWLING >");
-        int opcion = menuBowling();
+
         short ocupacion = 0;
         int dineroRecaudado = 0;
         String[] nombres = new String[500];
         byte[] edades = new byte[500];
         String[] documentos = new String[500];
         short[] entradas = new short[500];
+
+        int opcion = menuBowling();
 
         while (opcion != 0) {
             Scanner scanner = new Scanner(System.in);
