@@ -4,35 +4,35 @@ import java.util.Scanner;
 public class Main {
     public static void main (String[] args) {
         // 2
-        bienvenida();
+        //bienvenida();
 
         // 1
-        presentacion();
+        //presentacion();
 
         // 3
-        elMasGrande();
+        //elMasGrande();
 
         // 4
-        paridad();
+        //paridad();
 
         // 5
-        compararTextos();
+        //compararTextos();
 
         // 6
-        validarPrimos();
+        //validarPrimos();
 
         // 7
         int [] arrayNumeros = {50, 80, 13, 35, 43, 85, 17, 7, 2};
-        acumularArray(arrayNumeros);
+        //acumularArray(arrayNumeros);
 
         // 8
-        mostrarParesSumarPrimos(arrayNumeros);
+        //mostrarParesSumarPrimos(arrayNumeros);
 
         // 9 + 10
         calculadora();
 
         // 11 + 12
-        boleteriaBowling();
+        //boleteriaBowling();
     }
 
     // 1
@@ -104,7 +104,7 @@ public class Main {
                 numero = scanner.nextInt();
                 primeraVuelta = true;
             } else {
-                System.out.println("[Error]" + mensaje);
+                System.out.println("[Error] " + mensaje);
                 numero = scanner.nextInt();
             }
 
@@ -124,7 +124,7 @@ public class Main {
                 numero = scanner.nextInt();
                 primeraVuelta = true;
             } else {
-                System.out.println("[Incorrecto]" + mensaje);
+                System.out.println("[Incorrecto] " + mensaje);
                 numero = scanner.nextInt();
             }
 
@@ -259,7 +259,7 @@ public class Main {
                 case 3:
                     System.out.println("--------------------------");
                     System.out.println("< Multiplicar >");
-                    int n2 = validarMayorA(0, "Ingrese la cantidad de números a multiplicar (mínimo 2):");
+                    int n2 = validarMayorA(1, "Ingrese la cantidad de números a multiplicar (mínimo 2):");
                     int acumuladorMultiplicador = 0;
                     for (int i = 0; i < n2; i++) {
                         System.out.println("Ingrese el " + (i+1) + "°" + " número:");
@@ -274,8 +274,8 @@ public class Main {
                 case 4:
                     System.out.println("--------------------------");
                     System.out.println("< Dividir >");
-                    int dividendo = validarMayorA(0, "Ingrese el dividendo: ");
-                    int divisor = validarMayorA(0, "Ingrese el divisor (Distinto de cero): ");
+                    float dividendo = validarMayorA(0, "Ingrese el dividendo: ");
+                    float divisor = validarMayorA(0, "Ingrese el divisor (Distinto de cero): ");
                     System.out.println("Resultado Dividir: " + (dividendo / divisor));
                     break;
             }
@@ -301,13 +301,15 @@ public class Main {
     public static void boleteriaBowling() {
         System.out.println("-------------------------------------------------------");
         System.out.println("< MENU BOWLING >");
-        int opcion = menuBowling();
+
         short ocupacion = 0;
         int dineroRecaudado = 0;
         String[] nombres = new String[500];
         byte[] edades = new byte[500];
         String[] documentos = new String[500];
         short[] entradas = new short[500];
+
+        int opcion = menuBowling();
 
         while (opcion != 0) {
             Scanner scanner = new Scanner(System.in);
