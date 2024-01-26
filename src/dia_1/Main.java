@@ -274,7 +274,7 @@ public class Main {
                 case 4:
                     System.out.println("--------------------------");
                     System.out.println("< Dividir >");
-                    float dividendo = validarMayorA(0, "Ingrese el dividendo: ");
+                    float dividendo = validarMayorA(0, "Ingrese el dividendo (Distinto de cero): ");
                     float divisor = validarMayorA(0, "Ingrese el divisor (Distinto de cero): ");
                     System.out.println("Resultado Dividir: " + (dividendo / divisor));
                     break;
