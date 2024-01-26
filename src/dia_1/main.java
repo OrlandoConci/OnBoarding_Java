@@ -259,7 +259,7 @@ public class Main {
                 case 3:
                     System.out.println("--------------------------");
                     System.out.println("< Multiplicar >");
-                    int n2 = validarMayorA(0, "Ingrese la cantidad de números a multiplicar (mínimo 2):");
+                    int n2 = validarMayorA(1, "Ingrese la cantidad de números a multiplicar (mínimo 2):");
                     int acumuladorMultiplicador = 0;
                     for (int i = 0; i < n2; i++) {
                         System.out.println("Ingrese el " + (i+1) + "°" + " número:");
@@ -274,8 +274,8 @@ public class Main {
                 case 4:
                     System.out.println("--------------------------");
                     System.out.println("< Dividir >");
-                    int dividendo = validarMayorA(0, "Ingrese el dividendo: ");
-                    int divisor = validarMayorA(0, "Ingrese el divisor (Distinto de cero): ");
+                    float dividendo = validarMayorA(0, "Ingrese el dividendo: ");
+                    float divisor = validarMayorA(0, "Ingrese el divisor (Distinto de cero): ");
                     System.out.println("Resultado Dividir: " + (dividendo / divisor));
                     break;
             }
