@@ -73,15 +73,15 @@ public class Person {
         this.nombreMascotas = nombreMascotas;
     }
 
-    public void presentacion(String nombre, String apellido, int edad, double altura, boolean casado, String documento, String[] nombreMascotas) {
-        System.out.println("Hola! Mi nombre es " + nombre + " " + apellido + ".");
-        System.out.println("Tengo " + edad + " años y mido " + altura + " metros de altura.");
+    public void presentacion() {
+        System.out.println("Hola! Mi nombre es " + getNombre() + " " + getApellido() + ".");
+        System.out.println("Tengo " + getEdad() + " años y mido " + getAltura() + " metros de altura.");
         if (casado) {
             System.out.println("Estoy casado/a.");
         } else {
             System.out.println("No estoy casado/a.");
         }
-        System.out.println("Mi DNI es " + documento + ".");
+        System.out.println("Mi DNI es " + getDocumento() + ".");
         if (nombreMascotas.length > 0 ) {
             System.out.println("Mis mascotas se llaman: ");
             for (int i = 0; i<nombreMascotas.length; i++) {
